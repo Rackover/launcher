@@ -104,8 +104,8 @@ namespace cef
 		window_info.SetAsPopup(nullptr, "X Labs"s + (updater::is_main_channel() ? "" : " (DEV-BUILD)"));
 		window_info.bounds.width = 800 * (GetDpiForSystem() / USER_DEFAULT_SCREEN_DPI);
 		window_info.bounds.height = 475 * (GetDpiForSystem() / USER_DEFAULT_SCREEN_DPI);
-		window_info.bounds.x = (GetSystemMetrics(SM_CXSCREEN) - window_info.width) / 2;
-		window_info.bounds.y = (GetSystemMetrics(SM_CYSCREEN) - window_info.height) / 2;
+		window_info.bounds.x = (GetSystemMetrics(SM_CXSCREEN) - window_info.bounds.width) / 2;
+		window_info.bounds.y = (GetSystemMetrics(SM_CYSCREEN) - window_info.bounds.height) / 2;
 		window_info.style = WS_SIZEBOX | WS_POPUP;
 
 		if (!this->ui_handler_)
